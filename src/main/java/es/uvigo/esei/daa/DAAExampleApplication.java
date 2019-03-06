@@ -1,17 +1,17 @@
 package es.uvigo.esei.daa;
 
-import static java.util.stream.Collectors.toSet;
+import es.uvigo.esei.daa.rest.PeopleResource;
+import es.uvigo.esei.daa.rest.PetsResource;
+import es.uvigo.esei.daa.rest.UsersResource;
 
+import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.core.Application;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 import java.util.stream.Stream;
 
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
-
-import es.uvigo.esei.daa.rest.PeopleResource;
-import es.uvigo.esei.daa.rest.UsersResource;
+import static java.util.stream.Collectors.toSet;
 
 /**
  * Configuration of the REST application. This class includes the resources and
@@ -26,7 +26,8 @@ public class DAAExampleApplication extends Application {
 	public Set<Class<?>> getClasses() {
 		return Stream.of(
 			PeopleResource.class,
-			UsersResource.class
+			UsersResource.class,
+                PetsResource.class
 		).collect(toSet());
 	}
 	
