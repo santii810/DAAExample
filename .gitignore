@@ -15,3 +15,8 @@ WebContent
 # Testing
 /servers
 C:\\nppdf32Log\\debuglog.txt
+
+
+#Santi
+.idea/*
+example.iml
